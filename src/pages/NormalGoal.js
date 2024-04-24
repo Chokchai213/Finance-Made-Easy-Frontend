@@ -6,7 +6,7 @@ import { NormalGoalCreateEdit } from "components/NormalGoalCreateEdit";
 import { useParams } from "react-router-dom";
 import { Footer } from "components/Footer";
 import axios from "axios";
-const baseURL = "http://localhost:8000";
+const baseURL = "https://finance-made-easy-backend.onrender.com";
 async function fetchGoalData(userStore, goalObjId) {
   const result = await axios.get(
     `${baseURL}/db/get_goal_by_obj_id`,

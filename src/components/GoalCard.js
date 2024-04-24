@@ -67,7 +67,7 @@ function EachCard({ data }) {
             setIsLoading(true);
             handleCloseDelete();
             axios.post(
-                `http://localhost:8000/db/delete_goal`,
+                `https://finance-made-easy-backend.onrender.com/db/delete_goal`,
                 {
                     Name: data.Name,
                     goalId: data._id,

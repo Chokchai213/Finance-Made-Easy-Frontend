@@ -122,7 +122,7 @@ export function TaxCal() {
         async function fetchData() {
             if (uid != null && data.length === 0) {
                 await axios
-                    .get(`http://localhost:8000/db/userdata=${uid}`)
+                    .get(`https://finance-made-easy-backend.onrender.com/db/userdata=${uid}`)
                     .then((response) => {
                         if (response.data.length != 12) {
                             setIsEnoughData(false);
@@ -145,7 +145,7 @@ export function TaxCal() {
             if (arr.length === 0) {
                 let sumFund = 0;
                 await axios
-                    .get(`http://localhost:8000/db/userassets=${uid}`)
+                    .get(`https://finance-made-easy-backend.onrender.com/db/userassets=${uid}`)
                     .then((response) => {
                         console.log(response.data)
                         if (response.data.length > 0) {

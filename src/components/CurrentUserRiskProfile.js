@@ -7,7 +7,7 @@ import { Typography } from "@mui/material";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { getMasterDataByName } from "utils/masterDataUtil";
-const baseURL = "http://localhost:8000";
+const baseURL = "https://finance-made-easy-backend.onrender.com";
 
 export const CurrentUserRiskProfile = () => {
     const userStore = useSelector((state) => state.userStore);

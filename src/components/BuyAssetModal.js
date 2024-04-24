@@ -13,7 +13,7 @@ import TextField from "@mui/material/TextField";
 import { LineChart } from "@mui/x-charts/LineChart";
 import { roundNumber } from "utils/numberUtil";
 
-const baseURL = "http://localhost:8000";
+const baseURL = "https://finance-made-easy-backend.onrender.com";
 
 async function getFundsLastestNav(proj_id, userStore) {
     try {

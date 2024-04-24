@@ -65,10 +65,10 @@ export const SelectFund = () => {
             if (uid) {
                 setIsloading(true);
                 let avgIn = 0;
-                const fundsResponse = await axios.get('http://localhost:8000/db/funds');
+                const fundsResponse = await axios.get('https://finance-made-easy-backend.onrender.com/db/funds');
                 const displayData = fundsResponse.data.filter((fund) => { if (fund.spec_code) { return (fund.spec_code.includes("SSF") || fund.spec_code.includes("RMF")) } })
                 setFunds(displayData);
-                const userData = await axios.get(`http://localhost:8000/db/userdata=${uid}`);
+                const userData = await axios.get(`https://finance-made-easy-backend.onrender.com/db/userdata=${uid}`);
                 let sumOfInvest = 0;
                 userData.data.forEach(item => {
                     console.log(item.investmentData)
@@ -147,10 +147,10 @@ export const SelectFund = () => {
             });
             if (Funds.includes('')) { alert('กรุณาใส่ข้อมูลให้ครบ') }
             else {
-                axios.post('http://localhost:8000/db/save_tax_goal', { Name: 'ลดหย่อนภาษี', Funds: { ...Funds }, userId: uid })
+                axios.post('https://finance-made-easy-backend.onrender.com/db/save_tax_goal', { Name: 'ลดหย่อนภาษี', Funds: { ...Funds }, userId: uid })
                     .then(navigate("/Goal-Based"));
                 // axios.post(
-                //     `http://localhost:8000/db/change_goal_percentage`,
+                //     `https://finance-made-easy-backend.onrender.com/db/change_goal_percentage`,
                 //     {
                 //         userId: uid,
                 //         goal: oldGoal,

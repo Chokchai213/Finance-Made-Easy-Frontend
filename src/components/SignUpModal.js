@@ -11,7 +11,7 @@ import { useDispatch } from "react-redux";
 import axios from "axios";
 import { Login, LoginEmailPassword } from "../store/UserSlice";
 import { OverlayLoading } from "./OverlayLoading";
-const baseURL = "http://localhost:8000";
+const baseURL = "https://finance-made-easy-backend.onrender.com";
 
 function SignUpModal({ show, setShow, mode }) {
   const handleClose = () => setShow(false);

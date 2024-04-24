@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import axios from "axios";
-const baseURL = "http://localhost:8000";
+const baseURL = "https://finance-made-easy-backend.onrender.com";
 
 async function setCurrentGoalStatus(goalStatus,goalData, userStore){
     await axios.post(

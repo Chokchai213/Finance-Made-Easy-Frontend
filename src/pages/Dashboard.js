@@ -8,7 +8,7 @@ import axios from "axios";
 import { Container } from "react-bootstrap";
 import { UserNetSummary } from "components/UserNetSummary";
 import { Footer } from "components/Footer";
-const baseURL = "http://localhost:8000";
+const baseURL = "https://finance-made-easy-backend.onrender.com";
 
 function fetchUserData(userStore) {
     return new Promise((resolve, reject) => {

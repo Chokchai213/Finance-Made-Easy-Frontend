@@ -31,7 +31,7 @@ export const ReductionGoalBuyInformation = ({ goalData }) => {
         async function fetchData() {
             if (goalData !== null && data.length === 0) {
                 await axios
-                    .get(`http://localhost:8000/db/userdata=${goalData.userId}`)
+                    .get(`https://finance-made-easy-backend.onrender.com/db/userdata=${goalData.userId}`)
                     .then((response) => {
                         setData(response.data);
                     });
@@ -39,7 +39,7 @@ export const ReductionGoalBuyInformation = ({ goalData }) => {
         };
         async function fetchGoalAsset() {
             try {
-                const res = await axios.get(`http://localhost:8000/db/get_user_asset_by_goal_id`, {
+                const res = await axios.get(`https://finance-made-easy-backend.onrender.com/db/get_user_asset_by_goal_id`, {
                     headers: {
                         userId: userStore.userId,
                         Authorization: userStore.userToken,

@@ -17,7 +17,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { Footer } from "components/Footer";
 import { SellPriceZeroPromptModal } from "components/SellPriceZeroPromptModal";
 
-const baseURL = "http://localhost:8000";
+const baseURL = "https://finance-made-easy-backend.onrender.com";
 
 async function getFundsLastestNav(proj_id, userStore) {
     try {

@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import axios from "axios";
 import "./RiskLevel_RiskEvalNormal.css";
 import { getMasterDataByName } from "utils/masterDataUtil";
-const baseURL = "http://localhost:8000";
+const baseURL = "https://finance-made-easy-backend.onrender.com";
 
 export const RiskLevel = ({ evaluationResult, setshowRiskLevel }) => {
   const navigate = useNavigate();

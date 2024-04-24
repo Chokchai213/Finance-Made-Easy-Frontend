@@ -25,7 +25,7 @@ import { formatNumberWithCommas } from "utils/numberUtil";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 
-const baseURL = "http://localhost:8000";
+const baseURL = "https://finance-made-easy-backend.onrender.com";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   "&.freeSpace": {

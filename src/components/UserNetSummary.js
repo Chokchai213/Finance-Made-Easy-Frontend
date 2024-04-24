@@ -7,7 +7,7 @@ import { formatNumberWithCommas } from "utils/numberUtil";
 import Grid from "@mui/material/Grid";
 import axios from "axios";
 
-const baseURL = "http://localhost:8000";
+const baseURL = "https://finance-made-easy-backend.onrender.com";
 
 async function fetchUserNetSummary(userStore) {
     const getResult = await axios.get(`${baseURL}/db/get_user_net_summary`, {

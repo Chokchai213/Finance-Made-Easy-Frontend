@@ -14,7 +14,7 @@ import { ComponentLoading } from "./OverlayLoading";
 import { useSelector } from "react-redux";
 import axios from "axios";
 
-const baseURL = "http://localhost:8000";
+const baseURL = "https://finance-made-easy-backend.onrender.com";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {

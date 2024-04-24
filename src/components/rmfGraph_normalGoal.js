@@ -19,7 +19,7 @@ import { useSelector } from "react-redux";
 import axios from "axios";
 import "./rmfGraph_normalGoal.css";
 
-const baseURL = "http://localhost:8000";
+const baseURL = "https://finance-made-easy-backend.onrender.com";
 
 export const RmfFactsheet = (data, setShowChooseFund) => {
   console.log(data)
@@ -92,10 +92,10 @@ export const RmfFactsheet = (data, setShowChooseFund) => {
 
   async function fetchData(userStore) {
     try {
-      const fundsResponse = await axios.get("http://localhost:8000/db/funds");
+      const fundsResponse = await axios.get("https://finance-made-easy-backend.onrender.com/db/funds");
       setFunds(fundsResponse.data);
       const userData = await axios.get(
-        `http://localhost:8000/db/userdata=${userStore.userId}`
+        `https://finance-made-easy-backend.onrender.com/db/userdata=${userStore.userId}`
       );
       let sumOfInvest = 0;
       userData.data.forEach((item) => {

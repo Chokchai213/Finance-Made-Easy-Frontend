@@ -118,7 +118,7 @@ export function NewTaxGoal() {
             if (arr.length === 0) {
                 let sumFund = 0;
                 await axios
-                    .get(`http://localhost:8000/db/userassets=${uid}`)
+                    .get(`https://finance-made-easy-backend.onrender.com/db/userassets=${uid}`)
                     .then((response) => {
                         console.log(response.data)
                         if (response.data.length > 0) {
@@ -303,7 +303,7 @@ export function NewTaxGoal() {
     // console.log('income : ', incomeObj);
     // console.log('expense : ', benefitObj);
     function saveTaxGoal() {
-        axios.post('http://localhost:8000/db/save_tax_goal', {
+        axios.post('https://finance-made-easy-backend.onrender.com/db/save_tax_goal', {
             Name: 'ลดหย่อนภาษี',
             userId: uid,
             //netIncome: incomeSum - benefitSum - personal - insurance - charity - fund,

@@ -10,7 +10,7 @@ import { AssetSummaryGoalTable } from "./AssetSummaryGoalTable_GoalBased";
 import { AssetSummaryGoalPieChart } from "./AssetSummaryGoalPieChart_GoalBased";
 import axios from "axios";
 
-const baseURL = "http://localhost:8000";
+const baseURL = "https://finance-made-easy-backend.onrender.com";
 
 async function getUserAssets(userStore) {
     const getResult = await axios.get(`${baseURL}/db/get_user_asset`, {

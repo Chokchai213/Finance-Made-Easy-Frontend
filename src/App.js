@@ -14,7 +14,7 @@ import { TaxCal } from "pages/TaxCalculation";
 import { GoalInvestment } from "pages/GoalInvestment";
 import { BuyAssetPage } from "pages/BuyAssetPage";
 
-const baseURL = "http://localhost:8000";
+const baseURL = "https://finance-made-easy-backend.onrender.com";
 function RequireAuth({ children, redirectTo }) {
   const localUser = JSON.parse(localStorage.getItem("userData"));
   if (!localUser) {

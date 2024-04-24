@@ -16,7 +16,7 @@ import { Modal } from "react-bootstrap";
 import { formatNumberWithCommas, roundNumber } from "utils/numberUtil";
 import axios from "axios";
 
-const baseURL = "http://localhost:8000";
+const baseURL = "https://finance-made-easy-backend.onrender.com";
 
 const taxableIncome = [
     {

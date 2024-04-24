@@ -15,7 +15,7 @@ import { Footer } from "components/Footer";
 import Box from "@mui/material/Box";
 import axios from "axios";
 import { roundNumber } from "utils/numberUtil";
-const baseURL = "http://localhost:8000";
+const baseURL = "https://finance-made-easy-backend.onrender.com";
 
 async function fetchGoalData(userStore, goalObjId) {
     const result = await axios.get(`${baseURL}/db/get_goal_by_obj_id`, {

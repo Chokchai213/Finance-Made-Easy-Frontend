@@ -18,7 +18,7 @@ import { CurrentUserRiskProfile } from "components/CurrentUserRiskProfile";
 import { UserNetSummary } from "components/UserNetSummary";
 import Box from "@mui/material/Box";
 import { Footer } from "components/Footer";
-const baseURL = "http://localhost:8000";
+const baseURL = "https://finance-made-easy-backend.onrender.com";
 
 export const GoalBased = () => {
     const navigate = useNavigate();
@@ -38,12 +38,12 @@ export const GoalBased = () => {
             if (uid != null) {
                 let riskProfileTemp;
                 await axios
-                    .get(`http://localhost:8000/db/userdata=${uid}`)
+                    .get(`https://finance-made-easy-backend.onrender.com/db/userdata=${uid}`)
                     .then((response) => {
                         setData(response.data);
                     });
                 await axios
-                    .get(`http://localhost:8000/db/usergoal=${uid}`)
+                    .get(`https://finance-made-easy-backend.onrender.com/db/usergoal=${uid}`)
                     .then((res) => {
                         setGoal(res.data);
                     });
@@ -56,12 +56,12 @@ export const GoalBased = () => {
         async function fetchData() {
             if (uid != null) {
                 await axios
-                    .get(`http://localhost:8000/db/userdata=${uid}`)
+                    .get(`https://finance-made-easy-backend.onrender.com/db/userdata=${uid}`)
                     .then((response) => {
                         setData(response.data);
                     });
                 await axios
-                    .get(`http://localhost:8000/db/usergoal=${uid}`)
+                    .get(`https://finance-made-easy-backend.onrender.com/db/usergoal=${uid}`)
                     .then((res) => {
                         setGoal(res.data);
                         if (res.data.length > 0) {
